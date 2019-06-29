@@ -1,0 +1,35 @@
+<div class="fluid">
+	<div class="row " style="width: 100%">
+		<div class="col-md-3">
+			<app-commondashboard></app-commondashboard>
+		</div>
+
+		<div class="col-md-8 box">
+		      <div class="row col-md-8 col-md-offset-1 custyle">
+                <div class="boxhead">
+                <p style="font-size: 16pt;"><span class="glyphicon glyphicon-edit"></span>Course List</p>
+                </div>
+    <table class="table table-striped custab">
+    <thead>
+    <!-- <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a> -->
+        <tr>
+            <th>Course-ID</th>
+            <th>Course Name</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+            <tr *ngFor="let data of coursedata">
+                <td>{{data.course_id}}</td>
+                <td>{{data.course_name}}</td>
+                <td class="text-center"><a class='btn btn-info btn-xs'  (click)="editCourse(data.course_id)"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a class="btn btn-danger btn-xs" (click)="Deletecourse(data.course_id)"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+    </table>
+    
+
+    <button class="btnSubmit" *ngIf="lower_limit > 0" (click)="Prevoius()">PREVIOUS</button>
+
+    <button class="btnSubmit" *ngIf="lower_limit < length " (click)="NEXT()">NEXT</button>
+    </div>
+		</div>
+	</div>
+</div>

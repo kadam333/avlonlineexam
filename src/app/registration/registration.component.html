@@ -1,0 +1,605 @@
+<div class="container">
+<h3>STUDENT REGISTRATION FORM</h3>
+</div>
+
+<!-- registartion form open -->
+<div class="container">
+	<form class="form-section">
+		<div class="row">
+		<div class="col-md-6">
+			<div class="form-group form-inline">
+				<label class="mylabel" for="usr">FORM NO./ROLL NO.:</label>
+				<input type="text" class="form-control" id="usr" placeholder="APPLICATION FORM NO.">
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="form-group form-inline">
+				<label class="mylabel" for="usr">SESSION:</label>
+				<input type="text" class="form-control" id="usr" placeholder="ENTER ADMISSION SESSION">
+			</div>
+		</div>
+	</div>
+
+	<!-- start course name & course group -->
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group form-inline">
+				<select class="form-control" id="coursedropdown"name="stucourse" >
+                            <option value="" selected="selected">SELECT YOUR COURSE</option>
+                            <optgroup label="Traditional Courses"></optgroup>
+                            <option value="BA">BA</option>
+                            <option value="BCom">B.Com. Plain</option>                            
+                            <option value="MA1">MA in English literature(अंग्रेजी साहित्य)</option>
+                            <option value="MA2">MA in Hindi literature(हिंदी साहित्य)</option>
+                            <option value="MA3">MA in Sanskrit literature(संस्कृत साहित्य)</option>
+                            <option value="MA4">MA in Marathi literature(मराठी साहित्य)</option>
+                            <option value="MA5">MA in Psychology(मनोविज्ञान)</option>
+                            <option value="MA6">MA in Economics(अर्थशास्त्र)</option>
+                            <option value="MA7">MA in Geography(भूगोल)</option>
+                            <option value="MA8">MA in History(इतिहास)</option>
+                            <option value="MA9">MA in Political Science(राजनीति विज्ञान)</option>
+                            <option value="MA10">MA in Sociology(समाजशास्त्र)</option>
+                            <option value="MA11">MA in Philosophy(दर्शनशास्त्र)</option>                           
+                            <option value="MCom">M.Com</option>                            
+                            <optgroup label="Self Financed Courses"></optgroup>
+                            <option value="BCom2">B.Com(Tax Procedure &amp; Practice)</option> 
+                            <option value="BCom3">B.Com(Advertisement Management)</option> 
+                            <option value="BCom4">B.Com(Computer Application)</option> 
+                            <option value="BCom5">B.Com(Foreign Trade)</option> 
+                            <option value="BCom6" >B.Com(Office Management)</option> 
+                            <option value="BSW">B.S.W.</option> 
+                            <option value="PGDCA">PGDCA</option> 
+-                            <option value="BJ">Bachelor of Journalism</option> 
+                            <option value="MJ">Master in Journalism</option> 
+                            <option value="PGDYS">P.G. Diploma in Yogic Science</option> 
+                            <option value="MAYoga">MA in Yoga</option> 
+                            <option value="BBA">B.B.A.</option> 
+                            <option value="BAComputer">BA (Computer)</option> 
+                            <option value="MA12">MA in Public Administration</option> 
+                            <option value="MSW">MSW</option> 
+                            <option value="MPhil1">M.Phil Commerce</option> 
+                            <option value="MPhil2">M.Phil Sociology</option> 
+                            <option value="MPhil3">M.Phil Hindi</option> 
+                            <option value="MPhil4">M.Phil English</option> 
+                            <option value="MBA">M.B.A.</option> 
+                            <option value="PhD">Ph.D.</option> 
+                            <option value="BMC">BMC</option> 
+                               <option value="B.J.">B.J.</option> 
+                            <option value="M.J.">M.J.</option> 
+                        </select>
+			</div>
+			<div class="form-group">                      
+                        <select name="courseyear" class="form-control" id="semdropdwn">
+                        	<!-- <option value="? number:1 ?"></option> -->
+                            <option value="" selected="selected">Select Your Course Year/Semester</option>
+                            <option value="1Yr">1 Year</option>
+                            <option value="1Sem">1 Sem</option>
+                            <option value="2Yr">2 Year</option>
+                            <option value="2Sem">2 Sem.</option>
+                            <option value="3Yr">3 Year</option>                          <option value="3Sem">3 Sem.</option>
+                            <option value="4Sem">4 Sem.</option>
+                            <option value="5Sem">5 Sem.</option> 
+                            <option value="6Sem">6 Sem.</option>                      
+                        </select>
+            </div>
+		</div>
+	    <div class="col-md-6">
+	    		<div class="multiselect">
+	    			<label style="margin-left: 76px;">Select Any Three Subject with Shift or Ctrl Key(Only for BA)</label>
+	    			<select class="form-control" id="multiple" multiple="multiple"><option value="0" label="Economics/अर्थशास्त्र">Economics/अर्थशास्त्र</option><option value="1" label="Marathi/मराठी">Marathi/मराठी</option><option value="2" label="Sanskrit Literature/संस्कृत साहित्य">Sanskrit Literature/संस्कृत साहित्य</option><option value="3" label="Political Science/राजनीति विज्ञान">Political Science/राजनीति विज्ञान</option><option value="4" label="English Literature/अंग्रेजी साहित्य">English Literature/अंग्रेजी साहित्य</option><option value="5" label="Sociology/समाजशास्त्र">Sociology/समाजशास्त्र</option><option value="6" label="History/इतिहास">History/इतिहास</option><option value="7" label="Philosophy/दर्शनशास्त्र">Philosophy/दर्शनशास्त्र</option><option value="8" label="Psychology/मनोविज्ञान">Psychology/मनोविज्ञान</option><option value="9" label="Hindi Literature/हिंदी साहित्य">Hindi Literature/हिंदी साहित्य</option><option value="10" label="Geography/भूगोल">Geography/भूगोल</option><option value="11" label="Computer App./कम्प्युटर एप्लिकेशन">Computer App./कम्प्युटर एप्लिकेशन</option></select>
+	    		</div>
+	    </div> 
+	</div>
+	<!-- <close courses name and group> -->
+     <div class="row">
+     		<div class="col-sm-6">                    
+                    <div class="form-group">                
+                        <div class="category">
+                        	<!-- category -->
+                        <label>Category :</label>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio"  value="GEN" name="stucategory" checked="true" > GEN
+                            </label>                   
+                        </div>                       
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="OBC" name="stucategory"> OBC
+                            </label>
+                        </div>                       
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="SC" name="stucategory"> SC
+                            </label>
+                        </div>                       
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="ST" name="stucategory"> ST
+                            </label>
+                        </div>                       
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <div class="category">
+                    	<!-- divyang -->
+                        <label>Divyang/नि:शक्तजन :</label>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio"  value="Yes" name="studivyang"> Yes
+                            </label>                   
+                        </div>                       
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio" value="No" name="studivyang" checked="true" > No
+                            </label>
+                        </div>
+                        <div class="radio-inline"> 
+                            <label>(नि:शक्तता संबंधी प्रमाण-पत्र लगाऍ)</label>
+                        </div>
+                    </div> 
+                </div>   
+                 <!-- minority-->
+                <div class="form-group">
+                    <div class="category">
+                        <label>Minority :</label>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio"  value="Muslim" name="stuminority" > Muslim
+                            </label>                   
+                        </div>                       
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="Sikh" name="stuminority" > Sikh
+                            </label>
+                        </div>   
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio" value="Christian"name="stuminority"> Christian
+                            </label>
+                        </div>   
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="Buddhist" name="stuminority" > Buddhist
+                            </label>
+                        </div>   
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="Jain" name="stuminority" > Jain
+                            </label>
+                        </div>   
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="None" name="stuminority" checked="true"> No
+                            </label>
+                        </div>   
+                    </div>
+                </div>                                        
+            </div>
+            <!-- <image preview> -->
+            <div class="col-md-6">
+            	<div class="form-group" style="height: 184px;">
+            		<div class="row uploadpic">
+            			<div class="col-sm-7 text-center">
+            			<label style="margin-top: 15px;">Upload Your Photo</label>
+            			<input type="file" name="myFile" multiple>
+            			<button type="button" class="btn btn-primary btn-md">UPLOAD PHOTO
+            			</button>
+            		    </div>
+                    
+                    <div class="col-sm-5 text-center">
+                    	<div class="imgpreview">
+                    		<img src="../assets/GACCLogo.png" class="imgresponsive">
+                    	</div>
+                    </div>
+            		</div>
+            	</div>
+            </div>
+     </div>
+     <!-- studentid/emailid -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group form-inline">
+            			<label class="mylabel" style="margin-top:10px;">Student ID :(Adhar Card Last 8 Digits)</label>
+				        <input type="text" style="width: 43%;margin-left:12px;" class="form-control" id="stid" placeholder="STUDENT ID">
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            		<input type="text" class="formcontrols" name="stuemail" placeholder="Enter Your Email Address/ईमेल आइडी" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- hindi/english -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stunameH" placeholder="Enter Your Full Name in Hindi/आवेदक का पूरा नाम हिन्दी मे" required="">
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stunameE" placeholder="Enter Your Full Name in English/आवेदक का पूरा नाम अग्रेजी मे" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- fathername -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols"  name="stufname" placeholder="Enter Your Father`s Name/पिता का नाम" required="">
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stufoccupation" placeholder="Father`s Occupation/पिता का व्यवसाय" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- mothername -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stumname" placeholder="Enter Your Mother`s Name/माता का नाम" required="">
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stumoccupation" placeholder="Mother`s Occupation/माता का व्यवसाय" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- dob -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group form-inline">
+            			<label class="mylabel">D.O.B/जन्मतिथि : </label>
+            			<input type="date" id="datepicker" class="form-control"placeholder="Enter Your Date of Birth/जन्मतिथि" title="Enter Your Date of Birth/जन्मतिथि" required="">
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stubirthplace" placeholder="Enter Your Birth Place/जन्मस्थान" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- age/nationality -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group form-inline">
+                        <label class="mylabel">Student Age/आयु : </label>
+                        <input type="text" class="form-control" name="stuage" placeholder="Select Your Date of Birth" required="" readonly="">
+                    </div>   
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="text" class="formcontrols" name="stunation" placeholder="Enter Your Nationality" required="">
+                    </div>                         
+                </div>
+            </div>
+            <!-- address -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<textarea class="address formcontrols"  name="stuaddressR" placeholder="Full Residence Address Landmark/Street/City/State/Pincode/ पूरा स्थानीय पता" required="" ></textarea>
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<textarea class="formcontrols" name="stuaddressP" placeholder="Full Permanent Address Landmark/Street/City/State/Pincode/ पूरा स्थायी पता" required=""></textarea>
+            		</div>
+            	</div>
+            </div>
+            <!-- mobileno. -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="number" class="formcontrols" name="stucontact"  maxlength="10" placeholder="Enter Your Mobile Number" required="">
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stuparentcontact" placeholder="Enter Parent Mobile Number/अभिभावक मोबाइल नंबर" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- gender/blood group -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<div class="category" style="height:  21px;">
+                        	<!-- category -->
+                        <label>Category :</label>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio"  value="GEN" name="stucategory" checked="true" >MALE
+                            </label>                   
+                        </div>                       
+                        <div class="radio-inline">                 
+                            <label>
+                                <input type="radio"  value="OBC" name="stucategory">FEMALE
+                            </label>
+                        </div>                                         
+                        </div>
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="bloodgroup" placeholder="Enter Your Blood Group/रक्त समूह" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- adharcardno. -->
+            <div class="row">
+                 <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="text" class="formcontrols" name="stuadharno" placeholder="Enter Your Adhar Card Number/आधार कार्ड नंबर" required="">
+                    </div>                           
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="text" class="formcontrols" name="familyincome" placeholder="Enter Your Family Income/परिवार की वार्षिक आय" required="">
+                    </div>                           
+                </div>
+            </div>
+            <!-- native mp -->
+            <div class="col-md-12">
+            	 <label>
+            		Are you a native of Madhya Pradesh :
+            	 </label>
+            	    <div class="radio-inline">
+                        <label>
+                            <input type="radio" value="Yes" name="stunativ" checked="true"> Yes
+                        </label>                   
+                    </div>
+                    <div class="radio-inline">
+                    	<label>
+                            <input type="radio" value="No" name="stunativ"> No
+                        </label>
+                    </div>
+                    <label> क्या आप मध्य प्रदेश के मूल निवासी है |
+                             (यदि हा तो मूल निवासी प्रमाण-पत्र की छायाप्रति लगाऍ, यदि नहीं तो पुलिस स्त्यापन का मूल शपथ-पत्र लगाऍ)</label>
+            </div>
+            <!-- bank details -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            		<input type="text" class="formcontrols" name="stubankaccount" placeholder="Enter Your Bank Account Number/बैंक खाता नंबर" required="">	
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stubankifsc" placeholder="Enter Bank IFSC Code/बैंक IFSC कोड" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- bankname -->
+            <div class="row">
+            	<div class="col-md-6">
+            		<div class="form-group">
+            		<input type="text" class="formcontrols" name="stubankname" placeholder="Enter Your Bank Name/बैंक का नाम" required="">	
+            		</div>
+            	</div>
+            	<div class="col-md-6">
+            		<div class="form-group">
+            			<input type="text" class="formcontrols" name="stufees" placeholder="Enter Your Fees" required="">
+            		</div>
+            	</div>
+            </div>
+            <!-- scholarship -->
+            <div class="col-md-12">
+            	 <label>
+            		छात्रव्रत्ति एवं शासकीय योजनाओं की जानकारी :
+            	 </label>
+            	    <div class="radio-inline">
+            	    	<label>
+                            <input type="checkbox"> पोस्टमेट्रिक छात्रव्रत्ति
+                        </label>
+            	    </div>
+            	    <div class="radio-inline">                 
+                            <label>
+                                <input type="checkbox"> आवासभत्ता
+                            </label>
+                    </div>
+                    <div class="radio-inline ">                 
+                            <label>
+                                <input type="checkbox"> गाव की वेटी योजना
+                            </label>
+                    </div>
+                    <div class="radio-inline">                 
+                            <label>
+                                <input type="checkbox"> असंगठित कर्मकार
+                            </label>
+                    </div>
+                    <div class="radio-inline">                 
+                            <label>
+                                <input type="checkbox"> प्रतिभाकिरण योजना
+                            </label>
+                    </div>
+                    <br>
+                    <div class="checkbox-inline" style="padding-left: 314px;">
+                    	<label>
+                                <input type="checkbox"> विक्रमादित्य योजना
+                        </label>
+                    </div>
+                    <div class="radio-inline">
+                    	<label>
+                                <input type="checkbox"> मेधावी छात्र योजना
+                        </label>
+                    </div>
+                    <div class="radio-inline">
+                    	<label>
+                                <input type="checkbox"> सेंट्रल सैक्टर छात्रव्रत्ति
+                        </label>
+                        <div class="radio-inline">
+                        	<label>
+                                <input type="checkbox"> पीएचडी छात्रव्रत्ति
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                        	<label>
+                                <input type="checkbox"> अल्पसंख्यक छात्रव्रत्ति
+                            </label>
+                        </div>
+                    </div>
+            </div>
+            <!-- employment intrest -->
+           <div class="col-md-12">
+            	 <label>
+            		भविष्य मे किस क्षेत्र मे रोजगार चाहते हैं ?
+            	 </label>
+            	    <div class="radio-inline">
+                            <label>
+                                <input type="checkbox"> शासकीय सेवा
+                            </label>                   
+                        </div>
+                    <div class="radio-inline">                 
+                            <label>
+                                <input type="checkbox"> अशासकीय सेवा
+                            </label>
+                    </div>
+                    <div class="radio-inline">                 
+                        <label>
+                            <input type="checkbox"> स्वयं का रोजगार
+                        </label>
+                    </div>
+            </div>
+            <!-- field of intrest -->
+            <div class="col-md-12">
+            	<label>
+            		रुचि का क्षेत्र ?
+            	</label>
+            	<div class="radio-inline">
+            		<label>
+                        <input type="checkbox"> क्रीडा
+                    </label>
+            	</div>
+            	<div class="radio-inline">                 
+                     <label>
+                        <input type="checkbox">  साहित्यक
+                     </label>       
+                </div>
+                <div class="radio-inline">                 
+                    <label>
+                        <input type="checkbox"> सांस्कृतिक
+                    </label>
+                </div>
+                <div class="radio-inline">                 
+                    <label>
+                        <input type="checkbox"> अन्य
+                    </label>
+                </div>
+            </div>
+            <!-- Attach Document List:   -->
+            <div class="row" style="margin-right: 0px;margin-left: 0px;">
+            	<div class="col-md-12"> 
+            		<label>
+                            Attach Document List:
+                    </label>
+                    <div class="radio-inline">
+                        <label>
+                            <input type="checkbox"> Admit Card of Last Exam
+                        </label>                   
+                    </div>
+                    <div class="radio-inline">
+                        <label>
+                            <input type="checkbox"> Last Exam Marksheet
+                        </label>                   
+                    </div>
+                    <div class="radio-inline">
+                    	<label>
+                            <input type="checkbox"> Fee Recipt of Last Year
+                        </label>
+                    </div>
+                    <div class="radio-inline">
+                    	<label>
+                            <input type="checkbox"> Adhar Card
+                        </label>
+                    </div>
+                    <div class="radio-inline">
+                    	<label>
+                            <input type="checkbox"> Cast Certificate
+                        </label>
+                    </div>
+            	</div>
+            </div>
+           
+            <!-- start qualification entry -->
+            <div class="row" style="margin-left:0px;margin-right:0px;">
+            	<div class="col-md-12" style="padding: 0px;border-radius: 0;">
+            		<table class="table table-striped text-center">
+            			<tbody>
+            				<tr>
+                                <th>Class</th>
+                                <th>RollNo.</th>
+                                <th>Enrollment</th>
+                                <th>Result</th>
+                                <th>Year</th>               
+                                <th>Total Marks</th>
+                                <th>Obtain Marks</th>
+                                <th>Subjects</th>
+                                <th>School/College</th>
+                                <th>Board/University</th>                              
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control2" name="qualifycls"></td>
+                                
+                                <td><input type="text" name="rollno" class="form-control2"></td>
+                                
+                                <td><input type="text" name="enroll"class="form-control2 "></td>
+                                
+                                <td><input type="text" name="result" class="form-control2 "></td>
+
+                                <td><input type="text"  name="passyear" class="form-control2"></td>                                
+                                
+                                <td><input type="text"  name="totalmarks" class="form-control2"></td>
+                                
+                                <td><input type="text" name="obtrinmarks" class="form-control2"></td>
+                                
+                                <td><input type="text"  name="classsubject" class="form-control2" ></td>
+                                
+                                <td><input type="text" name="college" class="form-control2"></td>
+                                
+                                <td><input type="text" name="board" class="form-control2"></td>
+                            </tr>
+            			</tbody>
+            		</table>
+            	</div>
+            </div>
+            <div class="text-center">
+            	<button type="button" class="btn btn-warning addbtn">ADD</button> 
+            </div>
+            <div class="row" style="margin-left: 0px;margin-right: 0px;">
+            	<div class="col-md-12" style="padding: 0px;border-radius: 0px;">
+            		<table class="table table-striped text-center">
+            			<tbody>
+            				<tr>
+                                <th>Class</th>
+                                <th>RollNo.</th>
+                                <th>Enrollment</th>
+                                <th>Result</th>
+                                <th>Year</th>               
+                                <th>Total Marks</th>
+                                <th>Obtain Marks</th>
+                                <th>Subjects</th>
+                                <th>School/College</th>
+                                <th>Board/University</th>                              
+                            </tr>
+            			</tbody>
+            		</table>
+            	</div>
+            </div>
+            <div class="row">               
+                 <div class="col-sm-12">
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox">मै घोषणा करता/करती हूँ कि मैंने महाविद्यालय की विवरणिका मे उल्लेखित समस्त नियमों/निर्देशों/सूचनाओ एवं आचरण सहिता का पूर्ण अध्ययन कर लिया है | मेरे द्वारा उपरोक्त दी गई जानकारी पूर्णता: सत्य है किसी भी तथ्य को न तो छुपाया है और न ही कोई असत्य/ भ्रामक जानकारी दी है|
+                        </label>
+                    </div>
+                </div>
+            </div>
+             <div class="text-center">
+            	<button type="button" class="btn btn-warning addbtn">SUBMIT</button> 
+            </div>
+	</form>
+</div>

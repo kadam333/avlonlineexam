@@ -1,0 +1,47 @@
+<div class="fluid">
+	<div class="row " style="width: 100%">
+		<div class="col-md-3">
+			<app-commondashboard></app-commondashboard>
+		</div>
+
+		<div class="col-md-8 box">
+			<div class="boxhead">
+      <p style="font-size: 16pt;"><span class="glyphicon glyphicon-edit"></span>Edit Subject</p>
+      </div>
+      <!-- form starting -->
+      <form [formGroup]="subject" (ngSubmit)="editsubjectdata()">
+            <div class="form-group">
+             <label>Course:</label>
+                  <select class="form-control" formControlName="cname" [ngClass]="{ 'is-invalid': submitted && f.cname.errors }">
+              <!-- <option selected>**SELECT COURSE**</option> -->
+              <option *ngFor="let data of coursedata" >{{data.course_name}}</option>
+              <div *ngIf="submitted && f.cname.errors" class="invalid-feedback">
+                            <div *ngIf="f.cname.errors.required" style="color: red;">subject Name is required</div>
+                            <div *ngIf="f.cname.errors.maxlength" style="color: red;">subject Name shouild be less than 100 charcter</div>
+               </div>
+                  </select>    
+            </div>
+
+              <div class="form-group">
+                  <label for="usr">Subject-id:</label>
+                  <input type="text" class="form-control" id="usr" formControlName="sid" readonly>
+             </div>
+        <div class="form-group">
+              <label>Subject Name:</label>
+              <input type="text" class="form-control" id="pwd" formControlName="sname" [ngClass]="{ 'is-invalid': submitted && f.sname.errors }">
+               <div *ngIf="submitted && f.sname.errors" class="invalid-feedback">
+                            <div *ngIf="f.sname.errors.required" style="color: red;">subject Name is required</div>
+                            <div *ngIf="f.sname.errors.maxlength" style="color: red;">subject Name shouild be less than 100 charcter</div>
+               </div>
+        </div>
+
+              <div class="form-group">        
+        <div class="text-center">
+            <button type="submit" class="btn-lg btn-danger">Update</button>
+        </div>
+        </div>
+        </form>
+      <!-- form closing -->
+		</div>
+	</div>
+</div>

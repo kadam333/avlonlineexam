@@ -1,0 +1,46 @@
+<div class="fluid">
+  <div class="row " style="width: 100%">
+    <div class="col-md-3">
+      <app-commondashboard></app-commondashboard>
+    </div>
+
+    <div class="col-md-9">
+          <h2 >FACULTY LIST</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>S No.</th>
+            <th>Faculty Id</th>
+            <th>Faculty Name</th>
+            <th>Email Id</th>
+            <th>Option</th>
+            <th>Current Status</th>
+        </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let data of facultylist,let index=index">
+        <td>{{index+1}}</td>
+        <td>{{data.faculty_id}}</td>
+        <td>{{data.faculty_name}}</td>
+        <td>{{data.email_id}}</td>
+        <td>
+          <div class="btn-group">
+             <button type="button" class="btn btn-success" *ngIf="data.status==1" (click)="facultystatus(data.faculty_id,1)"><span class="glyphicon glyphicon-ok"></span>ACTIVATE</button>
+             <button type="button" class="btn btn-danger" *ngIf="data.status==2" (click)="facultystatus(data.faculty_id,2)" ><span class="glyphicon glyphicon-eye-close"></span>DEACTIVATE</button>
+          </div>
+        </td>
+        <td>
+          <div class="btn-group">
+             <button type="button" class="btn btn-success" *ngIf="data.status==2"><span class="glyphicon glyphicon-ok"></span>ACTIVATE</button>
+             <button type="button" class="btn btn-danger" *ngIf="data.status==1" ><span class="glyphicon glyphicon-eye-close"></span>DEACTIVATE</button>
+          </div>
+        </td>
+      </tr>
+        <tbody>
+    </table>
+</div>
+<!-- table ending -->
+    </div>
+  </div>
+</div> 

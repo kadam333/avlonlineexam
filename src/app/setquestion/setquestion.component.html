@@ -1,0 +1,111 @@
+<div class="fluid">
+  <div class="row" style="width: 100%;">
+    <div class="col-md-3" >
+      <app-commondashboard></app-commondashboard>
+    </div>
+
+<section class="content-header">
+  <h1>Question</h1>
+</section>
+
+<section class="content">
+  <div class="box">
+     <div style="padding: 10px;border-bottom: 1px solid #f4f4f4;">
+      <h3 style="display: inline-block;font-size: 18px;margin: 0;line-height: 1;">Set Exam Questions</h3>
+     </div>
+     <form  [formGroup]='question' (ngSubmit)="questiondata()" >
+     <div class="box-content">
+       <div class="row">
+        <div class="col-md-12">
+        <div class="row">
+          <!-- <input type="hidden" name="" formControlName="id"> -->
+
+          <div class="col-md-6 form-group">
+          <label for="name">Course: </label>
+          <input type="text" class="form-control"   placeholder="Exam Name" value="" formControlName="coursename" readonly>
+        </div>
+
+ 
+        <div class="col-md-6">
+          <div class="form-group">
+                <label>Subject Name</label>
+                <input type="text" class="form-control"  placeholder="Exam Name" value="" formControlName="subjectname" readonly>  
+          </div>
+        </div>
+
+               <div class="row">
+                  <div class="col-md-6 form-group">
+                      <label>Exam Name</label>
+                      <input type="text" class="form-control" placeholder="Exam Name" value="" formControlName="examname" readonly>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Questions</label>
+                      <input type="text" class="form-control" value=""  placeholder="TOTAL QUESTIONS"  formControlName="totalquestion" readonly> 
+                    </div>
+               </div>
+               
+              <div class="row form-inline">
+                <div class="col-md-6 form-group lside" >
+                  <label style="margin: 5px 5px 5px 5px;">TOTAL QUESTION ENTER</label>
+                    <input type="text" value="" class="form-control" id="" placeholder="Total question" >
+                </div>
+                <div class="col-md-6 form-group rside">
+                  <label style="margin: 5px 5px 5px 5px;">COURSE ID</label>
+                    <input type="text" value="" class="form-control" id="" placeholder="Total question" formControlName="examcode">
+                </div>
+                </div> 
+
+               <div class="row">
+                  <div class="col-md-12 form-group">
+                     <label>Question:</label>
+                       <textarea class="form-control" formControlName="mainquestion"></textarea>
+                    </div>
+               </div>
+               <div class="row form-inline">
+                <div class="col-md-6 form-group lside" >
+                  <label style="margin: 5px 5px 5px 5px;">Option A</label>
+                    <input type="text" class="form-control" id="" placeholder="Option A" formControlName="optionA">
+                </div>
+                <div class="col-md-6 form-group rside">
+                  <label style="margin: 5px 5px 5px 5px;">Option B</label>
+                    <input type="text" class="form-control" id="" placeholder="Option B"
+                    formControlName="optionB">
+                </div>
+               </div>
+               <div class="row form-inline lside">
+                <div class="col-md-6 form-group" style="text-align: right;">
+                  <label style="margin: 5px 5px 5px 5px;">Option C</label>
+                    <input type="text" class="form-control" id="" placeholder="Option C"
+                    formControlName="optionC">
+                </div>
+                <div class="col-md-6 form-group rside">
+                  <label style="margin: 5px 5px 5px 5px;">Option D</label>
+                    <input type="text" class="form-control" id="" placeholder="Option D"
+                    formControlName="optionD">
+                </div>
+               </div>
+               <div class="col-md-6 col-md-offset-3 form-group lside">
+                   <label style="margin: 5px 5px 5px 5px;float:left;">ANSWER</label>
+                   <input type="text" class="form-control" id="" placeholder="ANSWER" formControlName="answer">
+               </div>
+                   </div>
+    </div>
+    </div>     
+    </div>  
+     
+  
+  <div class="row">
+    <div class="col-md-12 form-group">
+  <div class="col-md-offset-5 col-md-6">
+    <input type="submit"  class="btn btn-primary">
+    <!-- <div>Count: <strong>{{ current }}</strong></div> -->
+  </div>
+  </div>
+  </div>
+</form>
+</div>
+
+  </section> 
+</div>
+</div>
+

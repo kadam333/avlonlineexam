@@ -1,0 +1,163 @@
+<div class="container">
+	<div class="row" style="width: 100%;">
+      <!-- setexamform starting -->
+      <div class="col-md-12">
+      	<form [formGroup]="question" (ngSubmit)="questiondata()">
+                <div class="note" style="margin-top: 10px;">
+                    <p style="text-align: center;">SET QUESTION</p>
+                </div>
+                    <!-- 1st line(left) -->
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               <label>Course Name</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Course Name" value="" formControlName="coursename" readonly />
+                            </div>
+                            </div>
+
+                            <div class="form-group">
+                               <label>Exam Code</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Exam Code" value="" formControlName="examcode" readonly/>
+                            </div>
+                            </div>
+
+                            <div class="form-group">
+                               <label>Total Questions</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Total Questions" value="" formControlName="totalquestion" readonly/>
+                            </div>
+                            </div>                             
+                        </div>
+
+                        
+
+                              <!-- 2nd line (r) -->
+                         <div class="col-md-6">
+                            <label>Subject Name</label>
+  		                        <div class="form-group">
+                                   <input type="text" class="form-control" placeholder="Subject Name" value="" formControlName="subjectname" readonly/>
+                                </div>
+
+                            <label>Exam Date</label>
+  		                        <div class="form-group">
+                                   <div class='input-group date' >
+                                       <input type='date' class="form-control" formControlName="date" readonly>
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                   </div>
+                                </div>
+                                <div class="form-group">
+                               <label>Exam Name</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Exam Name" value="" formControlName="examname" readonly/>
+                            </div>
+                            </div>
+                            <!-- form right side -->
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+
+                <div class="form-content1">
+                	<div class="row">
+                		<!-- questions start -->
+						<div class="col-md-12">
+                  <!-- <label>{{matchquestion}}</label> -->
+                  <div class="form-group">
+                               <label>Question Entered</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Exam Name" value="{{qcount}}"  readonly/>
+                            </div>
+                            </div>
+						    	<div class="form-group">
+						           <label>Questions</label>
+						        <div class="form-group">
+						            <textarea class="form-control" rows="" id="comment" formControlName="mainquestion"  [ngClass]="{ 'is-invalid': submitted && f.mainquestion.errors }"></textarea>
+
+                         <div *ngIf="submitted && f.mainquestion.errors" class="invalid-feedback">
+                            <div *ngIf="f.mainquestion.errors.required" style="color: red;">Question is required</div>
+                            <div *ngIf="f.mainquestion.errors.maxlength" style="color: red;">Total Question shouild be less than 200 Character</div>
+                         </div>
+						        </div>
+						        </div>   
+						</div>
+                      
+                      <!-- option(Leftside) -->
+                      <div class="col-md-6 ">
+                      	<label>Option A:</label>
+  		                    <div class="form-group">
+                               <input type="text" class="form-control" placeholder="Option A" value="" formControlName="optionA" [ngClass]="{ 'is-invalid': submitted && f.optionA.errors }"/>
+
+                               <div *ngIf="submitted && f.optionA.errors" class="invalid-feedback">
+                            <div *ngIf="f.optionA.errors.required" style="color: red;">option A is required</div>
+                            <div *ngIf="f.optionA.errors.maxlength" style="color: red;">Total Question shouild be less than 40 Character</div>
+                         </div>
+                          </div>
+                        
+                        <label>Option B:</label>
+  		                    <div class="form-group">
+                               <input type="text" class="form-control" placeholder="Option B" value="" formControlName="optionB" [ngClass]="{ 'is-invalid': submitted && f.optionA.errors }"/>
+
+                               <div *ngIf="submitted && f.optionB.errors" class="invalid-feedback">
+                            <div *ngIf="f.optionB.errors.required" style="color: red;">option B is required</div>
+                            <div *ngIf="f.optionB.errors.maxlength" style="color: red;">Total Question shouild be less than 40 Character</div>
+                         </div>
+                          </div>
+                      </div>
+
+                      <!-- option(Rightside) -->
+                      <div class="col-md-6 ">
+                      	<label>Option C:</label>
+  		                    <div class="form-group">
+                               <input type="text" class="form-control" placeholder="Option C" value="" formControlName="optionC" [ngClass]="{ 'is-invalid': submitted && f.optionA.errors }"/>
+
+                               <div *ngIf="submitted && f.optionC.errors" class="invalid-feedback">
+                            <div *ngIf="f.optionC.errors.required" style="color: red;">option C is required</div>
+                            <div *ngIf="f.optionC.errors.maxlength" style="color: red;">Total Question shouild be less than 40 Character</div>
+                         </div>
+                            </div>
+                        
+                        <label>Option D:</label>
+  		                    <div class="form-group">
+                               <input type="text" class="form-control" placeholder="Option " value="" formControlName="optionD" [ngClass]="{ 'is-invalid': submitted && f.optionD.errors }"/>
+
+                               <div *ngIf="submitted && f.optionD.errors" class="invalid-feedback">
+                            <div *ngIf="f.optionD.errors.required" style="color: red;">option D is required</div>
+                            <div *ngIf="f.optionD.errors.maxlength" style="color: red;">Total Question shouild be less than 40 Character</div>
+                         </div>
+                            </div>
+                      </div>
+                        
+                        <!-- answer -->
+                        <div class="col-md-offset-3 col-md-6 col-md-offset-3 text-center">
+                        	<label style="text-align: center;">Answer:</label>
+  		                    <div class="form-group">
+                               <select class="form-control" formControlName="answer" [ngClass]="{ 'is-invalid': submitted && f.answer.errors }">
+                                    <option selected >**select Answer**</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                </select>
+
+                         <div *ngIf="submitted && f.answer.errors" class="invalid-feedback">
+                            <div *ngIf="f.answer.errors.required" style="color: red;">Answer is required</div>
+                            <!-- <div *ngIf="f.answer.errors.maxlength" style="color: red;">Total Question shouild be less than 2 Digit</div> -->
+                         </div>
+                            </div>
+                        </div>
+                         <input type="Submit" value="Submit" (click)="check()" class="btnSubmit"/>
+                    </div>
+                </div>
+            </form>
+      </div>
+
+	</div> 
+</div>
+<!-- *ngIf="qcount.value == 0 "  -->

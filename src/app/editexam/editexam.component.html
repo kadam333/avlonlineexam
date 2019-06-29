@@ -1,0 +1,105 @@
+<div class="fluid">
+	<div class="row" style="width: 100%;">
+		<div class="col-md-3" >
+			<app-commondashboard></app-commondashboard>
+		</div>
+
+      <!-- setexamform starting -->
+
+      <div class="col-md-9">
+
+      	<form [formGroup]="exameditdata" (ngSubmit)="editexamdata()"><!-- [formGroup]="category" (ngSubmit)="categorydata()" -->
+                <div class="note" style="margin-top: 60px;">
+                    <p style="text-align: center;">SET EXAM</p>
+                </div>
+                    <!-- 1st line -->
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            	<label>Course:</label>
+                                 <input type="text" class="form-control" placeholder="Course Name" value="" formControlName="course" readonly />
+                            </div>
+                            <div class="form-group">
+                               <label>Exam Code</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Exam Code" value="" formControlName="examcode" readonly />
+                            </div>
+                            </div>
+ 
+                            <div class="form-group">
+                               <label>Total Questions</label>
+                            <div class="form-group"> 
+                                <input type="text" class="form-control" placeholder="Total Questions" value="" formControlName="totalquestion"
+                                [ngClass]="{ 'is-invalid': submitted && f.totalquestion.errors }" />
+                                <div *ngIf="submitted && f.totalquestion.errors" class="invalid-feedback">
+                                <div *ngIf="f.totalquestion.errors.required" style="color: red;">Total Question is required</div>
+                            <div *ngIf="f.totalquestion.errors.maxlength" style="color: red;">Total Question shouild be less than 2 Digit</div>
+                            </div>
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                               <label>Exam Name</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Exam Name" value="" formControlName="examname" [ngClass]="{ 'is-invalid': submitted && f.examname.errors }" />
+                                <div *ngIf="submitted && f.examname.errors" class="invalid-feedback">
+                                <div *ngIf="f.examname.errors.required" style="color: red;">exam Name is required</div>
+                                <div *ngIf="f.examname.errors.maxlength" style="color: red;">exam Name shouild be less than 100 charcter</div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+
+                              <!-- 2nd line -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            	<label>Subject</label>
+                                 <input type="text" class="form-control" placeholder="Subject Name" value="" formControlName="subject" readonly />
+                            </div>
+                            <label>Exam Date</label>
+  		                        <div class="form-group">
+                                   <div class='input-group date' >
+                                       <input type='date' class="form-control" formControlName="date" [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                        <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                                <div *ngIf="f.date.errors.required" style="color: red;">date is required</div>
+                                   </div>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                               <label>Time Duration(in minute)</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Time Duration" value="" formControlName="timeduration"  [ngClass]="{ 'is-invalid': submitted && f.timeduration.errors }" />
+                                <div *ngIf="submitted && f.timeduration.errors" class="invalid-feedback">
+                                <div *ngIf="f.timeduration.errors.required" style="color: red;">Time Duration is required</div>
+                                <div *ngIf="f.timeduration.errors.maxlength" style="color: red;">Time Duration should be in 2 Digit</div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="form-group">
+                               <label>Passing Marks</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Passing Marks" value="" formControlName="passingmarks" [ngClass]="{ 'is-invalid': submitted && f.passingmarks.errors }"/>
+
+                                <div *ngIf="submitted && f.passingmarks.errors" class="invalid-feedback">
+                                <div *ngIf="f.passingmarks.errors.required" style="color: red;">passingmarks is required</div>
+                                <div *ngIf="f.passingmarks.errors.maxlength" style="color: red;">passingmarks should be in 2 Digit</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <button type="Submit" class="btnSubmit">Submit</button>
+                </div>
+            </form>
+            <!-- /endone -->
+      </div>
+
+	</div>
+</div>

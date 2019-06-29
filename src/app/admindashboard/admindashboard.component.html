@@ -1,0 +1,399 @@
+<div class="fluid">
+  <div class="row" style="margin-right: 0px;">
+    <div class="col-md-3">
+      <div class="nav-side-menu">
+    
+    <div class="brand"></div>
+    <div class="profile-block">
+  <div class="panel text-center">
+    <div class="user-heading"> <a href="#"><img src="../assets/exmlogo.png" alt="" title=""></a>
+      <h1>{{fname}}</h1>
+      <p>{{fmail}}</p>
+
+      <p *ngIf="fstatus == 1">USER-TYPE =>FACULTY PANEL</p>
+      <p *ngIf="fstatus == 0">USER-TYPE =>ADMIN PANEL</p>
+    </div> 
+  
+  </div>
+</div>
+        <div class="menu-list" *ngIf="fstatus == 0">
+            
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a >
+                  <i class="fa fa-th"></i> Dashboard
+                  </a>
+                </li> 
+                 
+
+                <!-- category -->
+                <li data-toggle="collapse" data-target="#products" class="collapsed">
+                <a><i class="fa fa-th"></i>Course<i class="glyphicon glyphicon-menu-down" style="float:right;margin-top:10px;"></i></a>
+               </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a routerLink="/category">Add Course</a></li>
+                    <li><a routerLink="/categorylist">Course List</a></li>
+                </ul>
+
+                 <!-- sub category -->
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a ><i class="fa fa-th"></i> Subject <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <a  routerLink="/subcategory"><li>Add Subject </li></a>
+                  <a  routerLink="/subcategorylist"><li>Subject List</li></a>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a ><i class="fa fa-th"></i> Students <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                 <a routerLink="/studentdata"><li>Students List</li></a>
+                </ul>
+                
+                <li data-toggle="collapse" data-target="#n" class="collapsed">
+                  <a ><i class="fa fa-th"></i> Faculty <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="n">
+                 <a routerLink="/facultydata"><li>Faculty List</li></a>
+                </ul>
+
+                 <li data-toggle="collapse" data-target="#detailsCollapse" class="collapsed">
+                     <a ><i class="fa fa-th"></i> Exam Section <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="detailsCollapse">
+                      <a routerLink="/setexam"><li>Set Exam</li></a>
+                      <a routerLink="/showsetexam"><li>All New exam</li></a>
+                      <a routerLink="/viewquestion"><li>View Activated exam</li></a>
+                      <a routerLink="/expireexam"><li>Expire Exam</li></a>
+                  </ul>
+                 
+                  <li>
+                  <a > <i class="glyphicon glyphicon-envelope"></i>Manage Notice</a>
+                  </li> 
+
+                   <li>
+                  <a (click)="Logout()" > <i class="glyphicon glyphicon-log-out"></i>Logout</a>
+                  </li> 
+
+                 <li *ngIf="length > 0">
+                 <a style="color: red;" class="blink"><i class="glyphicon glyphicon-file"></i>Incomplete Exams<i class="glyphicon glyphicon-alert blink"></i></a> 
+                </li>
+                <div *ngFor="let i of exams">
+                <li>
+                  <a (click)=getcode(i.exam_code)><i class="glyphicon glyphicon-exclamation-sign blink"></i> {{i.exam_code}}</a>
+                </li>  
+                </div>
+              
+            </ul>
+     </div>
+
+
+
+      <!-- =============FACULTY DASHBOARD================================= -->
+     <div class="menu-list" *ngIf="fstatus == 2">
+            
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a >
+                  <i class="fa fa-th"></i> Dashboard
+                  </a>
+                </li> 
+                 
+
+               
+                <!-- <li data-toggle="collapse" data-target="#products" class="collapsed">
+                <a><i class="fa fa-th"></i>Course<i class="glyphicon glyphicon-menu-down" style="float:right;margin-top:10px;"></i></a>
+               </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a routerLink="/category">Add Course</a></li>
+                    <li><a routerLink="/categorylist">Course List</a></li>
+                </ul>
+
+                
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a ><i class="fa fa-th"></i> Subject <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <a  routerLink="/subcategory"><li>Add Subject </li></a>
+                  <a  routerLink="/subcategorylist"><li>Subject List</li></a>
+                </ul>
+ -->
+
+                <!-- <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a ><i class="fa fa-th"></i> Students <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                 <a routerLink="/studentdata"><li>Students List</li></a>
+                </ul> -->
+
+
+                 <li data-toggle="collapse" data-target="#detailsCollapse" class="collapsed">
+                     <a ><i class="fa fa-th"></i> Exam Section <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="detailsCollapse">
+                      <!-- <a routerLink="/setexam"><li>Set Exam</li></a> -->
+                      <a routerLink="/showsetexam"><li>All New exam</li></a>
+                      <a routerLink="/viewquestion"><li>View Activated exam</li></a>
+                      <a routerLink="/expireexam"><li>Expire Exam</li></a>
+                  </ul>
+                 
+                  <li>
+                  <a > <i class="glyphicon glyphicon-envelope"></i>Manage Notice</a>
+                  </li> 
+
+                   <li >
+                  <a (click)="Logout()" > <i class="glyphicon glyphicon-log-out"></i>Logout</a>
+                  </li> 
+
+                 <li *ngIf="length > 0">
+                 <a style="color: red;" class="blink"><i class="glyphicon glyphicon-file"></i>Incomplete Exams<i class="glyphicon glyphicon-alert blink"></i></a> 
+                </li>
+                <div *ngFor="let i of exams">
+                <li>
+                  <a (click)=getcode(i.exam_code)><i class="glyphicon glyphicon-exclamation-sign blink"></i> {{i.exam_code}}</a>
+                </li>  
+                </div>
+              
+            </ul>
+     </div>
+</div>
+    </div>
+     
+
+
+     <!-- ============DASHBOARD BLOCK========== -->
+    <div class="col-md-9">
+      <div class="row" >
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile">
+                            <a >
+                                <div class="circle-tile-heading dark-blue">
+                                    <i class="fa fa-graduation-cap fa-fw fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="circle-tile-content dark-blue"> 
+                                <div class="circle-tile-description text-faded">
+                                    Total Students
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                    {{stcount}}
+                                    <span id="sparklineA"></span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile">
+                            <a >
+                                <div class="circle-tile-heading green">
+                                    <i class="fa fa-group fa-fw fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="circle-tile-content green">
+                                <div class="circle-tile-description text-faded">
+                                    Activate Students
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                     {{activated}}
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile ">
+                            <a >
+                                <div class="circle-tile-heading orange" >
+                                    <i class="fa fa-bell fa-fw fa-3x"  *ngIf="examlive == 0"></i>
+                                    <div  *ngIf="examlive >=1 "> <i class="fa fa-bell fa-fw fa-3x blink" style="color: red;"></i></div>
+                                </div>
+
+
+                            </a>
+                            <div class="circle-tile-content orange">
+                                <div class="circle-tile-description text-faded">
+                                    Live Exams
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                    {{examlive}}
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile">
+                            <a >
+                                <div class="circle-tile-heading blue">
+                                    <i class="fa fa-book fa-fw fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="circle-tile-content blue">
+                                <div class="circle-tile-description text-faded">
+                                    Total Courses
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                    {{tcourse}}
+                                    <span id="sparklineB"></span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile">
+                            <a >
+                                <div class="circle-tile-heading red">
+                                    <i class="fa fa-edit fa-fw fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="circle-tile-content red">
+                                <div class="circle-tile-description text-faded">
+                                    Total Exams
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                    24
+                                    <span id="sparklineC"></span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile">
+                            <a >
+                                <div class="circle-tile-heading purple">
+                                    <i class="fa fa-envelope-o fa-fw fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="circle-tile-content purple">
+                                <div class="circle-tile-description text-faded">
+                                    Notice
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                    96
+                                    <span id="sparklineD"></span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+       <!-- =====FORM STARTING COLOUMN=== -->
+   <div class="profilecard head">
+       <h2 style="font-weight: 900; color: #fab509;text-align: center;">USER PROFILE</h2>
+   </div>
+   <div class="profilecard shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="row">
+<!-- ===================update form starting=================================================================== -->
+       <form [formGroup]="updateprofile" (ngSubmit)="onupdate()">
+
+        <div class="messages"></div>
+       
+        <div class="controls">
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_name">Faculty Id *</label>
+                 <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <input  type="text" class="form-control" placeholder="Faculty Id" formControlName="fid" readonly="">
+                 </div>
+          
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_lastname">Faculty Name *</label>
+                 <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input  type="text" class="form-control" placeholder="Faculty Name" formControlName="fname" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }">
+                     <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                            <div *ngIf="f.fname.errors.required">Faculty Name is required</div>
+                     </div>
+                 </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_email">Email_id *</label>
+                 <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input  type="text" class="form-control" placeholder="Email Id" readonly="" formControlName="femail">
+                 </div>
+               
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_phone">Password *</label>
+                 <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                    <input  type="Password" class="form-control" placeholder="Password" formControlName="fpassword" [ngClass]="{ 'is-invalid': submitted && f.fpassword.errors }">
+                     <div *ngIf="submitted && f.fpassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.fpassword.errors.required">Password is required</div>
+                            <div *ngIf="f.fpassword.errors.minlength">Password must be at least 6 characters</div>
+                     </div>
+                 </div>
+                
+              </div>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_email">Confirm Password *</label>
+                 <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                    <input  type="Password" class="form-control" placeholder="Confirm Password" formControlName="fcpassword" [ngClass]="{ 'is-invalid': submitted && f.fcpassword.errors }">
+
+                    <div *ngIf="submitted && f.fcpassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.fcpassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.fcpassword.errors.mustMatch">Passwords must match</div>
+                    </div>
+                 </div>
+               
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_phone"> Account Status</label>
+                
+              </div>
+              <button type="button" class="btn btn-success"  *ngIf="fstatus == 0 || fstatus == 2" style="margin-top: -14px;"><span class="glyphicon glyphicon-ok"></span>ACTIVATE</button>
+              <button type="button" class="btn btn-danger"  *ngIf="fstatus == 1" style="margin-top: -14px;"><span class="glyphicon glyphicon-ok"></span>DEACTIVATE</button>
+            </div>
+          </div>
+
+          <div class="row">
+            
+            <div class="col-md-12">
+              <input type="submit" class="btn btn-success btn-send" value="Update Profile">
+
+              <input (click)="Logout()"  *ngIf="fstatus == 1" class="btn btn-danger btn-send" value="LOGOUT">
+            </div>
+          </div>
+         
+        </div>
+
+        </form>
+        <!-- ===================update form ending=================================================================== -->
+    </div>
+
+   </div>
+         
+    
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="fluid">
+	<div class="row " style="width: 100%">
+		<div class="col-md-3">
+			<app-commondashboard></app-commondashboard>
+		</div>
+
+		<div class="col-md-9">
+		      <h2>Responsive Table</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>S No.</th>
+            <th>Exam Code</th>
+            <th>Exam Name</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of examdetails,let index=index">
+            <td>{{index+1}}</td>
+            <td>{{data.exam_code}}</td>
+            <td>{{data.exam_name}}</td>
+            <td class="text-center"><button type="button" class="btn btn-primary" (click)="sendexamcode(data.exam_code)"><span class="glyphicon glyphicon-edit"></span>View Questions</button></td> 
+        </tr>
+        <tbody>
+    </table>
+</div>
+		</div>
+	</div>
+</div>

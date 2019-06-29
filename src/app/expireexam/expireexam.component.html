@@ -1,0 +1,42 @@
+<div class="fluid">
+  <div class="row " style="width: 100%">
+    <div class="col-md-3">
+      <app-commondashboard></app-commondashboard>
+    </div>
+
+    <div class="col-md-9">
+    	<div class="note" style="margin-top: 60px;">
+            <p style="text-align: center;">EXAM HISTORY</p>
+        </div>
+          <!-- <h2>Responsive Table</h2> -->
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>   
+            <th>S No.</th>
+            <th>Exam Code</th>
+            <th>Course name</th>
+            <th>Subject Name</th>
+            <th>Exam Name</th>
+            <th>Exam Date</th>
+            <th>Total Questions</th>
+        </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let data of examdata,let index=index">
+        <td>{{index+1}}</td>
+        <td>{{data.exam_code}}</td>
+        <td>{{data.course}}</td>
+        <td>{{data.subject}}</td>
+        <td>{{data.exam_name}}</td>
+        <td>{{data.exam_date}}</td>
+        <td>{{data.total_questions}}</td>
+        
+      </tr>
+        <tbody>
+    </table>
+</div>
+<!-- table ending -->
+    </div>
+  </div>
+</div>

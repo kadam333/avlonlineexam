@@ -1,0 +1,45 @@
+<div class="fluid">
+<div class="jumbotron">
+  <div class="row" style="margin-right: 11px;">
+    <div class="col-md-3">
+      <img src="../assets/GACCLogo.png" class="GACCLogo">      
+    </div>
+    <div class="col-lg-9">
+      <p class="media-heading">
+        SHRI ATAL BIHARI VAJPAYEE GOVT ARTS & COMMERCE COLLEGE INDORE<br>
+        (NATIONAL PREMIER INSTITUTE)
+      </p>
+      <p>ACCREDITED BY 'NAAC' A GRADE GOVERNMENT INSTITUTE AND AFFILATED TO DEVI AHILYA VISHWAVIDYALAYA<br>INDORE (M.P.)</p>
+    </div>
+  </div>   
+  </div>
+
+<!-- <navigation bar> -->
+
+<nav class="navbar navbar-inverse " *ngIf="!auth.isLoggedIn()">
+    <ul class="nav navbar-nav text-center">
+      <li><a routerLink='/'>HOME</a></li>
+      <li><a routerLink='/collegeinfo'>COLLEGE INFO</a></li>
+      <li><a routerLink='/register'>ADMISSION</a></li>
+      <li><a href="#">CONTACT-US</a></li>
+      <li><a routerLink="/login">LOGIN</a></li>
+      <li><a routerLink="/studentlogin">ONLINE EXAM</a></li>
+    </ul>
+</nav>
+
+<div style=" min-height: 700px; width: 100%;">
+<router-outlet></router-outlet>
+</div>
+<!-- footer -->
+<footer> 
+  <button type="button" class="btn btn-dark">HOME</button>
+  <button type="button" class="btn btn-dark">COLLEGE INFO</button>
+  <button type="button" class="btn btn-dark">DEPARTMENTS</button>
+  <button type="button" class="btn btn-dark">PHOTO GALLERY</button>
+  <button type="button" class="btn btn-dark">NEWS</button>
+  <button type="button" class="btn btn-dark">ADMISSION</button>
+  <button type="button" class="btn btn-dark">CONTACT-US</button>
+  <button type="button" class="btn btn-dark">LOGIN</button>
+  <p style="padding: 25px;font-size: large;font-weight: 700;">Copyright@2017 GACC college Indore.All rights reserved.</p>
+</footer>
+</div> 

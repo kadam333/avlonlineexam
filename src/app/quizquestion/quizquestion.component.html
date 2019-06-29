@@ -1,0 +1,54 @@
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-8">
+            <div class="questionplate">
+                <h4 style="margin: 10px;font-size: 15px;font-weight: bold;"><span class="glyphicon glyphicon-list" style="padding: 5px 5px 5px 5px;"></span>Questions</h4>
+            </div>
+            <!--  display question-->
+            <div class="question" >
+                <h4 style="padding-top: 35px;padding-left: 35px; font-weight: 800;">Question No. {{index}}</h4>
+
+                <p class="mainquestion">{{ques[0].question}} </p>
+
+                <div class="funkyradio">
+                    <div class="funkyradio-default">
+                        <input type="radio" name="radio" id="radio1"  value="A" (click)="answer('A')"/>
+                        <label for="radio1">{{ques[0].option_a}} </label>
+                    </div>
+                    <div class="funkyradio-primary">
+                        <input type="radio" name="radio" id="radio2" (click)="answer('B')"/>
+                        <label for="radio2">{{ques[0].option_b}}</label>
+                    </div>
+                    <div class="funkyradio-success">
+                        <input type="radio" name="radio" id="radio3" (click)="answer('C')"/>
+                        <label for="radio3">{{ques[0].option_c}}</label>
+                    </div>
+                    <div class="funkyradio-warning">
+                        <input type="radio" name="radio" id="radio5" (click)="answer('D')"/>
+                        <label for="radio5">{{ques[0].option_d}}</label>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+        
+       <div class="col-md-4">
+            <div class="buttonplate">
+            <h4 style="margin: 10px;font-size: 15px;font-weight: bold;"><span class="glyphicon glyphicon-education" style="padding: 5px 5px 5px 5px;"></span>EXAM: {{question[0].exam_name}}</h4>
+           </div>
+           <div class="allbuttons">
+               <p>SUBJECT: {{question[0].subject_name}}</p>
+               <p>DURATION : 15 MIN.</p>
+               <p>TIME LEFT : </p>
+               <p>TOTAL MARKS :</p>
+           
+
+           <div class=" col-sm-3 platebutton list-inline" style="width: 96%;margin-top: 15px;">
+               <button type="button" class="btn btn-primary btn-circle btn-lg"  *ngFor="let data of question,let index=index" (click)="qid(data.question_id,index+1)">{{index+1}}
+               </button>
+               
+           </div>
+           </div>
+       </div>
+    </div>
+</div>

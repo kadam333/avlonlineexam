@@ -1,0 +1,38 @@
+ h3{
+    font-size: 24px;
+    background-color: #117d8b;
+    padding: 8px 10px 8px 13px;
+    line-height: 26.5px;
+    width: 100%;
+    color: cornsilk;
+    text-align: center;
+    /*font-weight: 600;*/
+    margin-top: -5px;
+    border: 1px solid;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 11px 9px;
+    margin-bottom: 0px;
+    background-color:  #117d8b;
+    border: 2px solid #d7eeef;
+}
+.col-md-6 {
+    width: 50%;
+    /* margin: 0px; */
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+a.list-group-item .list-group-item-heading, 
+button.list-group-item
+ .list-group-item-heading {
+    color: #ebe4e4;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list-group-item:hover{
+	background-color: black;
+}

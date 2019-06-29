@@ -1,0 +1,49 @@
+.note
+{
+    text-align: center;
+    height: 80px;
+   background: -webkit-linear-gradient(left, #31708f, #31708f);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    padding: 1%;
+    border: 1px solid #ced4da;
+    margin-bottom: 1%;
+}
+.form-control{
+    border-radius:0.5rem;
+}
+.form-content1{
+    padding: 1%;
+    border: 1px solid #ced4da;
+    margin-bottom: 1%;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+.col-md-9 {
+    width: 72%;
+    margin-top: 40px;
+}
+
+.btnSubmit {
+    border: none;
+    border-radius: 1.5rem;
+    margin-left: 400px;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+    margin-top: 20px;
+}

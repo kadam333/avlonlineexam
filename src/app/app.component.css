@@ -1,0 +1,91 @@
+/*<header>*/
+
+.jumbotron{
+height: 233px;
+background: #117d8b;
+}
+.jumbotron img{
+	height: 169px;
+    margin-left: 180px;
+    margin-top: -21px;
+    border: 1px solid black;
+    box-shadow: 0px 1px 6px 6px;
+}
+.jumbotron p {
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #fefefe;
+    margin-left: -76px;
+    margin-top: -3px;
+}
+.col-lg-9{
+	text-align: center;
+}
+
+/*<navigation bar>*/
+
+.navbar-inverse {
+   background-color: #008CBA;
+    margin-top: -30px;
+    border-color: #008CBA;
+    border-radius: 0px;
+   box-shadow: 1px 3px 13px 1px;
+
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fefefe;
+    margin-left: 37px;
+    display: block;
+    font-weight: 700;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	background-color: black;
+	color: white;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+.navbar-nav {
+    /* float: left; */
+    /* margin: 0px; */
+    margin-left: 284px;
+}
+     /*footer*/
+footer{
+    height: 150px;
+    background-color: #117d8b;
+    text-align: center;
+    box-shadow: 1px 3px 13px 1px;
+}     
+
+.btn {
+    display: inline-block;
+  /*  padding: 14px 18px 15px 20px;*/
+  background-color: snow;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.428571;
+    text-align: center;
+    margin-left: 26px;
+    margin-top: 22px;
+    /* white-space: nowrap; */
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 2px solid silver;
+    /* border-radius: 4px; */
+    }
+    
+    .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+}

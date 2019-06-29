@@ -1,0 +1,46 @@
+<div class="fluid">
+  <div class="row " style="width: 100%">
+    <div class="col-md-3">
+      <app-commondashboard></app-commondashboard>
+    </div>
+
+    <div class="col-md-9">
+          <h2>Responsive Table</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>S No.</th>
+            <th>Exam Code</th>
+            <th>Course name</th>
+            <th>Subject Name</th>
+            <th>Exam Name</th>
+            <th>Exam Date</th>
+            <th>Total Questions</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let data of examdata,let index=index">
+        <td>{{index+1}}</td>
+        <td>{{data.exam_code}}</td>
+        <td>{{data.course}}</td>
+        <td>{{data.subject}}</td>
+        <td>{{data.exam_name}}</td>
+        <td>{{data.exam_date}}</td>
+        <td>{{data.total_questions}}</td>
+        <td>
+          <div class="btn-group">
+             <button type="button" class="btn btn-primary" (click)="deleteexam(data.exam_code)"><span class="glyphicon glyphicon-trash"></span>Delete</button>
+             <button type="button" class="btn btn-primary" (click)="editexam(data.exam_code)" ><span class="glyphicon glyphicon-wrench"></span>Edit</button>
+             <button type="button" class="btn btn-primary" (click)="getexamcode(data.exam_code)"><span class="glyphicon glyphicon-plus"></span>Add question</button>
+          </div>
+        </td>
+      </tr>
+        <tbody>
+    </table>
+</div>
+<!-- table ending -->
+    </div>
+  </div>
+</div>

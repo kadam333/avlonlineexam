@@ -1,0 +1,35 @@
+<div class="fluid">
+	<div class="row " style="width: 100%">
+		<div class="col-md-3">
+			<app-commondashboard></app-commondashboard>
+		</div>
+
+		<div class="col-md-8 box">
+			<div class="boxhead">
+      <p style="font-size: 16pt;"><span class="glyphicon glyphicon-edit"></span>Add Course</p>
+      </div>
+      <!-- form starting -->
+      <form [formGroup]="category" (ngSubmit)="categorydata()">
+              <div class="form-group">
+                  <label for="usr">Course-id:</label>
+                  <input type="text" class="form-control" id="usr" formControlName="cid" readonly>
+             </div>
+        <div class="form-group">
+              <label >Course Name:</label>
+              <input type="text" class="form-control" id="pwd" formControlName="cname" [ngClass]="{ 'is-invalid': submitted && f.cname.errors }">
+               <div *ngIf="submitted && f.cname.errors" class="invalid-feedback">
+                    <div *ngIf="f.cname.errors.required" style="color: red;">Course Name is required</div>
+                    <div *ngIf="f.cname.errors.maxlength" style="color: red;">Course Name shouild be less than 100 charcter</div>
+                </div>
+        </div>
+
+              <div class="form-group">        
+        <div class="text-center">
+            <button type="submit" class="btn-lg btn-danger">Submit</button>
+        </div>
+        </div>
+        </form>
+      <!-- form closing -->
+		</div>
+	</div>
+</div>

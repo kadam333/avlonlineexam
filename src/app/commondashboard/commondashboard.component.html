@@ -1,0 +1,66 @@
+<div class="fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="nav-side-menu">
+    
+    <div class="brand">Faculty Name</div>
+    <div style="border-bottom: 2px solid; border-top: 2px solid;">
+      <img src="../assets/exmlogo.png" style="width: 50%; margin: 5px 69px 6px 65px;">
+    </div>
+        <div class="menu-list">
+            
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a routerLink="/admindashboard">
+                  <i class="fa fa-th"></i> Dashboard
+                  </a>
+                </li> 
+                
+
+                <!-- category -->
+                <li data-toggle="collapse" data-target="#products" class="collapsed">
+                <a><i class="fa fa-th"></i>Course<i class="glyphicon glyphicon-menu-down" style="float:right;margin-top:10px;"></i></a>
+               </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a routerLink="/category">Add Course</a></li>
+                    <li><a routerLink="/categorylist">Course List</a></li>
+                </ul>
+
+                 <!-- sub category -->
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a ><i class="fa fa-th"></i> Subject <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <a  routerLink="/subcategory"><li>Add Subject </li></a>
+                  <a  routerLink="/subcategorylist"><li>Subject List</li></a>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a ><i class="fa fa-th"></i> Students <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                 <a routerLink="/studentdata"><li>Students List</li></a>
+                </ul>
+
+
+                 <li data-toggle="collapse" data-target="#detailsCollapse" class="collapsed">
+                     <a ><i class="fa fa-th"></i> Exam Section <i class="glyphicon glyphicon-menu-down" style="float:right;margin-top: 10px;"></i></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="detailsCollapse">
+                      <a routerLink="/setexam"><li>Set Exam</li></a>
+                      <a routerLink="/showsetexam"><li>All New exam</li></a>
+                      <a routerLink="/viewquestion"><li>View Activated exam</li></a>
+                      <a routerLink="/expireexam"><li>Expire Exam</li></a>
+                  </ul>
+                 
+                  <li>
+                  <a > <i class="glyphicon glyphicon-calendar"></i>Manage Notice</a>
+                  </li> 
+              
+            </ul>
+     </div>
+</div>
+    </div>
+  </div>
+</div>
